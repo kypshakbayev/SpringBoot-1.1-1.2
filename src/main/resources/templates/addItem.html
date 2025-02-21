@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>ADD ITEM</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="/css/bootstrap.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<div style="align-items: center; display: flex; justify-content: center;">
+    <h1><a href="/home">Electronic Shop Items</a></h1>
+</div>
+
+<div style="align-items: center; display: flex; justify-content: center;">
+    <h3>Add you are items</h3>
+</div>
+
+<div class="container">
+     <form method="post" th:action="@{/addItem}">
+
+            <label class="form-label">Product name:</label>
+            <input class="form-control" type="text" name="item_name" required>
+            <br>
+
+            <label class="form-label">Product description:</label>
+            <input class="form-control" type="text" name="productDescription" rows="4" cols="50" required></input>
+            <br>
+            <label class="form-label">Product price:</label>
+            <input class="form-control" type="number" name="productPrice" step="0.1" required>
+            <br>
+             <button type="submit" name="addItem">Add product</button>
+     </form>
+</div>
+
+<script src="/js/bootstrap.bundle.js" type="text/javascript"></script>
+
+</body>
+</html>
